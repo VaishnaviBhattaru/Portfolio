@@ -4,7 +4,7 @@ import React from "react";
 export default function Projects(){
     return(
         <>
-        <h3 className="center">Projects</h3>
+        <h1 className="center">Projects</h1>
         <section id="projects" className="project-section">
          
             <div className="project-images"> 
