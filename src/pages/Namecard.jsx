@@ -14,7 +14,7 @@ Angular, typescript, Next.js, Node.js, and Express.js. Skilled in cloud integrat
 to build scalable, performance-driven web applications. Experienced in optimizing both front-end and back-end
 systems, with a focus on delivering user-centric designs and data-driven solutions that enhance user experience and
 system efficiency.</p>
-    <a href="src/Vaishnavi.Bhattaru.Resume.pdf" download>Download CV</a>
+    <a href="public/assets/Vaishnavi.Bhattaru.Resume.pdf" download>Download CV</a>
             </div>
             <div className="name-card-img">
                 <img src="Vaishnavi.png" alt="My photo" />
