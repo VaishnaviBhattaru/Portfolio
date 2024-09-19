@@ -45,7 +45,7 @@ export default function Projects(){
                 <img className="bg" src="app6.png" alt="" />
                 <div>
                 <h2>Project overview:</h2>
-            <p>I developed a Recipe Book App using React.js and integrated Gemini AI to create an AI-driven solution that generates personalized recipes based on user inputs. Users can enter any dish name, and the app returns a detailed recipe with ingredients, step-by-step instructions, and alternative ingredient suggestions. The app features a clean and intuitive user interface, responsive design, and provides personalized recipe suggestions through AI-powered analysis. Hosted on AWS/Netlify, it also ensures fast, reliable performance across devices.</p>
+            <p>I developed a Recipe Book App using React.js and integrated Gemini AI to create an AI-driven solution that generates personalized recipes based on user inputs. Users can enter any dish name, and the app returns a detailed recipe with ingredients, step-by-step instructions, and alternative ingredient suggestions. The app features a clean and intuitive user interface, responsive design, and provides personalized recipe suggestions through AI-powered analysis.</p>
             <a href="https://github.com/VaishnaviBhattaru/RecipeApp"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
             </div>
             </div>
