@@ -4,6 +4,11 @@ import React from "react";
 // import About from "./About";
 
 export default function Namecard(){
+    function openPDF() {
+        // const pdfUrl = process.env.PUBLIC_URL + '/myfile.pdf';
+        window.open('Vaishnavi.Bhattaru.Resume.pdf', '_blank');
+
+    }
     return(
         <>
         <section id = "namecard"className="name-card">
@@ -14,7 +19,9 @@ Angular, typescript, Next.js, Node.js, and Express.js. Skilled in cloud integrat
 to build scalable, performance-driven web applications. Experienced in optimizing both front-end and back-end
 systems, with a focus on delivering user-centric designs and data-driven solutions that enhance user experience and
 system efficiency.</p>
-    <a href="public/assets/Vaishnavi.Bhattaru.Resume.pdf" download>Download CV</a>
+<a href='Vaishnavi.Bhattaru.Resume.pdf' target="_blank" rel="noopener noreferrer">
+    <button>Download CV</button>
+    </a>
             </div>
             <div className="name-card-img">
                 <img src="Vaishnavi.png" alt="My photo" />
