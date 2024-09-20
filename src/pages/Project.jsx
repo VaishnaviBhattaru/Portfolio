@@ -13,7 +13,7 @@ export default function Projects(){
                 <div>
                 <h2>Project overview:</h2>
             <p>Developed a web application for users to browse and rent vans, while hosts can list and manage their vans, earnings, and reviews. Built dynamic UI components with React.js, integrated API calls, and utilized Firebase for real-time data storage.</p>
-            <a href="https://github.com/VaishnaviBhattaru/VanLife" target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
+            <a href="https://van-voyage.vercel.app" target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
             </div>
             </div>
             <div className="project-content">
@@ -21,7 +21,7 @@ export default function Projects(){
                 <div>
                 <h2>Project overview:</h2>
             <p>Developed an investment calculator that computes returns based on inputs such as initial investment, monthly contribution, interest rate, and duration. The app generates a detailed table displaying yearly investment values, interest, total returns, and invested capital.</p>
-            <a href="https://github.com/VaishnaviBhattaru/Investment_calculator"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
+            <a href="https://main--melodic-kangaroo-c0fd51.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
             </div>
             </div>
             <div className="project-content">
@@ -29,7 +29,7 @@ export default function Projects(){
                 <div>
                 <h2>Project overview:</h2>
             <p>Built a multi-user tasks management app using Angular and TypeScript. Implemented features allowing users to add and remove tasks in a shared environment, ensuring smooth collaboration and real-time updates.</p>
-            <a href="https://github.com/VaishnaviBhattaru/TasksApp"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
+            <a href="https://zippy-souffle-db8bfb.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
             </div>
             </div>
             <div className="project-content">
@@ -46,7 +46,7 @@ export default function Projects(){
                 <div>
                 <h2>Project overview:</h2>
             <p>I developed a Recipe Book App using React.js and integrated Gemini AI to create an AI-driven solution that generates personalized recipes based on user inputs. Users can enter any dish name, and the app returns a detailed recipe with ingredients, step-by-step instructions, and alternative ingredient suggestions. The app features a clean and intuitive user interface, responsive design, and provides personalized recipe suggestions through AI-powered analysis.</p>
-            <a href="https://github.com/VaishnaviBhattaru/RecipeApp"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
+            <a href="https://inquisitive-choux-452f84.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
             </div>
             </div>
 
