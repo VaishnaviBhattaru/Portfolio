@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 
 //<About /><Projects /><Contact />
 function App() {
+  
   const router = createBrowserRouter([{
     path: "/",
     element: <MainLayout />,
@@ -26,6 +27,7 @@ function App() {
   }
 ])
   return (
+
     
       <RouterProvider router={router} />
   

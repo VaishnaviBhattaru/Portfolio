@@ -1,58 +1,113 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable"; // Import react-swipeable
+import { projects } from "./data";
+export default function Projects() {
+  
 
-export default function Projects(){
-    return(
-        <>
-        <h1 className="center">Projects</h1>
-        <section id="projects" className="project-section">
-         
-            <div className="project-images"> 
-            <div className="project-content">
-                <img className="bg" src="app2.png" alt="" />
-                <div>
-                <h2>Project overview:</h2>
-            <p>Developed a web application for users to browse and rent vans, while hosts can list and manage their vans, earnings, and reviews. Built dynamic UI components with React.js, integrated API calls, and utilized Firebase for real-time data storage.</p>
-            <a href="https://van-voyage.vercel.app" target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
-            </div>
-            </div>
-            <div className="project-content">
-                <img className="bg" src="app3.png" alt="" />
-                <div>
-                <h2>Project overview:</h2>
-            <p>Developed an investment calculator that computes returns based on inputs such as initial investment, monthly contribution, interest rate, and duration. The app generates a detailed table displaying yearly investment values, interest, total returns, and invested capital.</p>
-            <a href="https://main--melodic-kangaroo-c0fd51.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
-            </div>
-            </div>
-            <div className="project-content">
-                <img className="bg" src="app4.png" alt="" />
-                <div>
-                <h2>Project overview:</h2>
-            <p>Built a multi-user tasks management app using Angular and TypeScript. Implemented features allowing users to add and remove tasks in a shared environment, ensuring smooth collaboration and real-time updates.</p>
-            <a href="https://zippy-souffle-db8bfb.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
-            </div>
-            </div>
-            <div className="project-content">
-                <img className="bg" src="app5.png" alt="" />
-                <div>
-                <h2>Project overview:</h2>
-            <p>Developed a web application replicating a notes app using React.js for the front-end and Firebase for the back-end. Implemented real-time data storage and retrieval with Firebase, ensuring a smooth and responsive user experience.</p>
-            <a href="https://github.com/VaishnaviBhattaru/Notes_app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
-            </div>
-            </div>
-            
-            <div className="project-content">
-                <img className="bg" src="app6.png" alt="" />
-                <div>
-                <h2>Project overview:</h2>
-            <p>I developed a Recipe Book App using React.js and integrated Gemini AI to create an AI-driven solution that generates personalized recipes based on user inputs. Users can enter any dish name, and the app returns a detailed recipe with ingredients, step-by-step instructions, and alternative ingredient suggestions. The app features a clean and intuitive user interface, responsive design, and provides personalized recipe suggestions through AI-powered analysis.</p>
-            <a href="https://inquisitive-choux-452f84.netlify.app"  target="_blank" rel="noopener noreferrer"><button>Take a look</button></a>
-            </div>
-            </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-            </div>
-            
+  const nextProject = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
-        </section>
-        </>
-    )}
+  const prevProject = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Swipe handlers from react-swipeable
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: nextProject,
+    onSwipedRight: prevProject,
+    preventDefaultTouchmoveEvent: true, // Prevent scrolling during swipe
+    trackMouse: true, // Allow mouse dragging
+  });
+
+  return (
+    <>
+      <h1 className="text-center pt-7 pb-5">Projects</h1>
+      <section id="projects" className="flex w-[100vw] flex-col items-center">
+        <div
+          className="relative w-full overflow-hidden"
+          {...swipeHandlers} // Attach swipe handlers to the container
+        >
+          {/* Project Carousel */}
+          <div
+            className="flex transition-transform w-full duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {projects.map((item, index) => (
+              <div
+                key={index}
+                className="w-full flex-shrink-0 flex flex-col items-center bg-white p-6 rounded-lg"
+              >
+                <img
+                  className="rounded-md w-[50vw]  object-cover"
+                  src={item.imgSrc}
+                  alt={item.altText}
+                />
+                <h2 className="font-bold text-xl mt-4">Project overview:</h2>
+                <p className="text-justify text-gray-600 mt-2">
+                  {item.description}
+                </p>
+                <div className="flex space-x-4 mt-4">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className=" btn-primary hover:bg-violet-700">
+                      Take a look
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className=" btn-primary hover:bg-violet-700">
+                      Github
+                    </button>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Previous Button */}
+          <button
+            onClick={prevProject}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-400 text-gray-700 rounded-full p-2"
+          >
+            ❮
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextProject}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-400 text-gray-700 rounded-full p-2"
+          >
+            ❯
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex mt-4 space-x-2">
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                currentIndex === index ? "bg-[#300e6f]" : "bg-gray-400"
+              }`}
+            ></div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}

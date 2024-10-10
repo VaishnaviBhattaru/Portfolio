@@ -10,7 +10,7 @@ export default function MainLayout(){
     return(
         <>
        <Header />
-       <LeftNav />
+       {/* <LeftNav /> */}
        <Outlet />
        <Footer />
        </>

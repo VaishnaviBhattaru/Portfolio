@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+  .btn-primary {
+    @apply py-4 px-5 bg-[#300e6f] text-white rounded-md shadow-md focus:outline-none focus:ring focus:ring-violet-200 focus:ring-opacity-75 hover:[filter:drop-shadow(0_5px_10px_#300e6f)];
+  }
+  .project{
+    @apply p-4 flex flex-col items-center text-[12px] text-justify sm:w-[60vw] bg-[#cbc3db] gap-4 border-2 border-violet-900 rounded-xl;
+  }
+}
+
 :root {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
-  color: black;
+  color: balck;
   background-color: white;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +35,9 @@ html{
 body {
   margin: 0;
   display: flex;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: black; */
+  
   
   /* place-items: center; */
   /* min-width: 320px;
@@ -26,7 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 
@@ -40,7 +59,7 @@ button{
   color: white;
 }
 
-header{
+/* header{
   position: fixed;
   margin-top: 0;
   width: 100vw;
@@ -48,7 +67,7 @@ header{
   background-image:linear-gradient(to right, #D5E7F2,#D5D7F2, #AEACF2);
   color: #213547;
   padding-left: 10vw;
-  /* height: 15vh; */
+  /* height: 15vh; 
   
 }
 .header-nav{
@@ -64,7 +83,7 @@ header{
   font-size: 2rem;
 }
 .header-nav img{
-  /* margin-top: 10px; */
+  /* margin-top: 10px; 
   height:5vh;
   border-radius: 50%;
 
@@ -85,7 +104,7 @@ header{
 }
 .header-nav a:hover{
   color: white;
-}
+} */
 .left-nav{
   position: fixed;
   display: flex;
@@ -108,27 +127,42 @@ header{
 .left-nav a:hover{
   background-color: #A599F2;
 }
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  text-align: center;
-  font-size: 1rem;
-  background-image:linear-gradient(to right, #D5E7F2,#D5D7F2 );
-  color: rgb(48, 10, 48);
-  padding: 1%;
 
-
-}
 section{
   padding-right: 7.5vw;
   padding-left: 7.5vw;
 }
+span {
+ width: 12vw;
+ height: 3vh; 
+ margin: 5px;
 
-.name-card{
+
+ /* padding: 10px; */
+ background-color: #f6f6f6;
+ color:#300e6f;
+ text-align: center;
+ font-size: 14px;
+ border-radius: 5px;
+ font-weight: 600;
+} 
+span:hover{
+  filter:drop-shadow(0 5px 10px white);
+}
+.bg{
+  background-image: url("mac.png");
+  padding-right: 40px;
+  height: 130px;
+  width: 220px;
+  padding-top: 15px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  background-size: cover;
+}
+/* .name-card{
   padding-top: 10vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   height: 85vh;
   background: url("background.jpeg");
   background-repeat: no-repeat;
@@ -137,7 +171,7 @@ section{
   /* background-size: auto; */
   /* background-blend-mode: color; */
 
-}
+/* }
 .name-card-info h1{
   font-size: 3rem;
 }
@@ -149,8 +183,8 @@ section{
 .name-card-info p{
   font-size: 1rem;
   
-}
-.name-card-info button{
+} */ 
+/* .name-card-info button{
   padding: 1rem 1.5rem;
   font-size: 1rem;
   background-color: #A599F2;
@@ -158,10 +192,11 @@ section{
   text-decoration: none;
   border-radius: 5%;
   color: white;
-}
-.name-card-info a:hover{
+ } */
+
+/* .name-card-info a:hover{
   /* display: block; */
-  opacity: 0.5;
+  /* opacity: 0.5;
   color: white;
 }
 .name-card-img{
@@ -171,11 +206,11 @@ section{
   padding-left: 10vw;
 }
 .name-card-img img{
-  height: 35vh;
+  height: 50vh;
   
-  border-radius: 50%;
-}
-
+  border-radius: 5%;
+} */ 
+/*
 .about-main{
   display: flex;
   flex-direction: column;
@@ -184,7 +219,7 @@ section{
   margin-top: 15vh;
   width: 78vw;
   padding-bottom: 10vh;
-  /* background: radial-gradient(600px at 1346px 551px, rgb(207 33 99 / 15%), transparent 80%); */
+  /* background: radial-gradient(600px at 1346px 551px, rgb(207 33 99 / 15%), transparent 80%); 
 
 
 
@@ -194,14 +229,13 @@ section{
   flex-direction: row;
   font-size: 1rem;
   /* align-items: evenly-spaced; */
-  /* justify-content: center; */
-  
+  /* justify-content: center; 
 }
 /* .about-content div{
   width: 40vw;
   
   
-} */
+} 
 
 .about-info{
   text-align: left;
@@ -211,16 +245,9 @@ section{
 .skills{
   display: flex;
   flex-wrap: wrap;
-}
-.skills span {
-  /* width: 350px;
-  height: 200px; */
-  margin: 5px;
-  padding: 10px;
-  background-color: #AEACF2;
-  color:white;
-}
-.project-section{
+}*/
+
+/* .project-section{
   display: flex;
   flex-direction: row;
   gap:5vw;
@@ -235,22 +262,12 @@ section{
   display: flex;
   flex-direction: column;
   gap: 10vh;
-}
-.bg{
-  background-image: url("mac.png");
-  padding-right: 40px;
-  height: 130px;
-  width: 220px;
-  padding-top: 15px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  background-size: cover;
-}
-.center{
+} */
+/* .center{
   text-align: center;
 
-}
-.project-content{
+} */
+/* .project-content{
   display: flex;
   flex-direction: row;
   gap: 5vw;
@@ -264,8 +281,8 @@ section{
   background-color: #A599F2;
   border: none;
   border-radius: 5%;
-}
-.contact{
+} */
+/* .contact{
   padding-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -282,7 +299,7 @@ section{
 form{
  display: flex;
  flex-direction: column;
- /* align-items: center; */
+ align-items: center; 
  background-color: #D5D7F2;
  width: 50vw;
  padding-top: 10vh;
@@ -304,10 +321,10 @@ input, textarea{
 }
 textarea{
   height: 20vh;
-}
+} */
 
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 600px){
   :root{
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1;
@@ -319,6 +336,9 @@ textarea{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100vw;
+}
+span{
+  width: 35vw;
 }
 /* footer{
   height: 10vh;
@@ -332,20 +352,20 @@ padding: 0.4vh;
 }
 .left-nav{
   width: 6vw;
-  height: 10vh;
+  /* height: 10vh; */
 }
 .left-nav img{
   width: 4vw;
 }
 h1{
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 2.6rem;
 }
 .name-card-img img{
   height: 30vh;
 }
 .name-card{
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 85vw
