@@ -44,7 +44,7 @@ export default function About() {
               stagger: 0.3, // Stagger the animations
               scrollTrigger: {
                   trigger: topItemsRef.current[0], 
-                  start: "center bottom",
+                  start: "top center",
                   toggleActions: "play none none reset",
               }
           }
@@ -62,7 +62,7 @@ export default function About() {
               stagger: 0.3,
               scrollTrigger: {
                   trigger: backItemsRef.current[0], 
-                  start: "center bottom",
+                  start: "top center",
                   toggleActions: "play none none reset", 
               }
           }
